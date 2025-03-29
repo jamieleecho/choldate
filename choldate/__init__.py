@@ -1,3 +1,3 @@
-__author__ = 'jasonrudy'
-#__all__ = ['choldate','choldate.test']
+__author__ = "jasonrudy"
+# __all__ = ['choldate','choldate.test']
 from ._choldate import cholupdate, choldowndate

@@ -1,5 +1,6 @@
 choldate/build
 choldate/choldate.c
+choldate/_choldate.c
 choldate/*.so
 build
 *.egg-info/
@@ -13,3 +14,4 @@ build
 choldate/__init__.pyc
 
 installTest.sh
+
