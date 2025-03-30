@@ -6,8 +6,6 @@ from setuptools import setup
 import numpy
 
 setup(
-    name="choldate",
-    version="0.1.0",
     packages=["choldate", "choldate.test"],
     package_dir={
         "choldate": "choldate",
