@@ -6,12 +6,12 @@
     check-lock \
     clean \
     fix-all \
-    fix-lint \
+    fix-format \
     lock \
     sync \
     test
 
-default: check-lock test
+default: check-all test
 
 build-dist:
 	uv build
@@ -27,9 +27,9 @@ check-lock:
 clean:
 	rm -rf .ruff_cache .venv build
 
-fix-all: fix-lint lock
+fix-all: fix-format lock
 
-fix-lint:
+fix-format:
 	uv run ruff format
 
 lock:

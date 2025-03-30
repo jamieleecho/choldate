@@ -16,7 +16,7 @@ The `Makefile` makes it easy to perform the most common operations:
 * `make check-lock` will verify the `uv.lock` is aligned to `pyproject.toml`
 * `make clean` cleans the virtual environment and caches
 * `make fix-all` formats the code and runs locks `uv.lock` to `pyproject.toml`
-* `make fix-lint` formats the code
+* `make fix-format` formats the code
 * `make lock` locks `uv.lock` to `pyproject.toml`
 * `make sync` syncs the python envhironment with `uv.lock`
 * `make test` will run the unit tests

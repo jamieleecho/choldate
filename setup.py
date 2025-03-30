@@ -9,9 +9,9 @@ setup(
     name="choldate",
     version="0.1.0",
     packages=["choldate", "choldate.test"],
-    package_dir = {
-        'choldate': 'choldate',
-        'choldate.test': 'choldate/test',
+    package_dir={
+        "choldate": "choldate",
+        "choldate.test": "choldate/test",
     },
     cmdclass={"build_ext": build_ext},
     ext_modules=cythonize(
