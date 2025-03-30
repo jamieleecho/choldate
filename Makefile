@@ -7,15 +7,18 @@
     clean \
     fix-all \
     fix-format \
+    fix-lint \
+    fix-lint-unsafe \
+    help \
     install-pre-commit \
     lock \
-    sync \
-    test
+    run-tests \
+    sync
 
-default: check-all test
+default: check-all run-tests
 
 build-dist:
-	uv build
+	uv build --verbose --sdist
 
 check-all: check-lint check-lock
 
@@ -26,12 +29,21 @@ check-lock:
 	uv lock --locked
 
 clean:
-	rm -rf .ruff_cache .venv build .cache *.egg-info
+	rm -rf .ruff_cache .venv build .cache *.egg-info dist
 
-fix-all: fix-format lock
+fix-all: fix-format fix-lint lock
 
 fix-format:
 	uv run ruff format
+
+fix-lint:
+	uv run ruff check --fix
+
+fix-lint-unsafe:
+	uv run ruff check --fix --unsafe-fixes
+
+help:
+	@echo ${.PHONY}
 
 install-pre-commit:
 	uv run pre-commit install
@@ -39,9 +51,9 @@ install-pre-commit:
 lock:
 	uv lock
 
+run-tests:
+	uv run python -m unittest discover -v -s ./choldate -p *test*.py
+
 sync:
 	uv sync --no-install-workspace
-
-test:
-	uv run python -m unittest discover -v -s ./choldate -p *test*.py
 
