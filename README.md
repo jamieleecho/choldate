@@ -5,14 +5,23 @@ Somewhat fast updating and downdating of Cholesky factors in Python
 
 ##installation
 
-Install from GitHub: `pip install git+git://github.com/jcrudy/choldate.git`
-
-Or, clone the GitHub repository and install from source, e.g.,
+Clone the GitHub repository and install from source, e.g.,
 
 1. `git clone git://github.com/jcrudy/choldate.git`
-2. `cd choldate; python setup.py install`
+2. `cd choldate && make`
 
-I am new to packaging Python modules.  If it doesn't work on your system, get in touch and I'll try to help you.
+The `Makefile` makes it easy to perform the most common operations:
+* `make check-all` will run linting and `uv.lock` checks
+* `make check-lint` will run check the linting
+* `make check-lock` will verify the `uv.lock` is aligned to `pyproject.toml`
+* `make clean` cleans the virtual environment and caches
+* `make fix-all` formats the code and runs locks `uv.lock` to `pyproject.toml`
+* `make fix-lint` formats the code
+* `make lock` locks `uv.lock` to `pyproject.toml`
+* `make sync` syncs the python envhironment with `uv.lock`
+* `make test` will run the unit tests
+
+`.vscode/settings.json` is set so that unit tests can be run without further configuration.
 
 ##usage
 ```python
