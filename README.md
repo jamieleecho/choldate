@@ -8,7 +8,7 @@ Somewhat fast updating and downdating of Cholesky factors in Python
 Clone the GitHub repository and install from source, e.g.,
 
 1. `git clone git://github.com/jcrudy/choldate.git`
-2. `cd choldate && make`
+2. `cd choldate && make sync && make install-pre-commit && make`
 
 The `Makefile` makes it easy to perform the most common operations:
 * `make check-all` will run linting and `uv.lock` checks
