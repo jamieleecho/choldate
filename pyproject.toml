@@ -9,6 +9,10 @@ dependencies = [
   "numpy",
 ]
 
+[dependency-groups]
+dev = [
+  "unittest2",
+]
 
 [build-system]
 requires = [
@@ -16,5 +20,4 @@ requires = [
   "numpy",
   "setuptools",
 ]
-build-backend = "setuptools.build_meta"
 
