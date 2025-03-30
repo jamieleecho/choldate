@@ -1,5 +1,5 @@
 [project]
-name = "jlc-choldate"
+name = "choldate"
 version = "0.1.0"
 description = "Somewhat fast updating and downdating of Cholesky factors in Python"
 readme = "README.md"
