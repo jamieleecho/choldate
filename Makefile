@@ -7,6 +7,7 @@
     clean \
     fix-all \
     fix-format \
+    install-pre-commit \
     lock \
     sync \
     test
@@ -31,6 +32,9 @@ fix-all: fix-format lock
 
 fix-format:
 	uv run ruff format
+
+install-pre-commit:
+	uv run pre-commit install
 
 lock:
 	uv lock

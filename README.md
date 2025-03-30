@@ -18,6 +18,7 @@ The `Makefile` makes it easy to perform the most common operations:
 * `make fix-all` formats the code and runs locks `uv.lock` to `pyproject.toml`
 * `make fix-format` formats the code
 * `make lock` locks `uv.lock` to `pyproject.toml`
+* `make install-pre-commit` installs pre-commit hooks
 * `make sync` syncs the python envhironment with `uv.lock`
 * `make test` will run the unit tests
 
@@ -51,5 +52,5 @@ assert(numpy.all((R1 - R1_)**2 < 1e-16))
 #And downdating is the inverse of updating
 R_ = R1.copy()
 choldowndate(R_,u.copy())
-assert(numpy.all((R - R_)**2 < 1e-16))  
-``` 
+assert(numpy.all((R - R_)**2 < 1e-16))
+```
