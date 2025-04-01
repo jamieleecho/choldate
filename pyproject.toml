@@ -1,6 +1,6 @@
 [project]
 name = "jlc-choldate"
-version = "0.1.0"
+version = "0.2"
 description = "Somewhat fast updating and downdating of Cholesky factors in Python"
 readme = "README.md"
 requires-python = ">=3.6"
