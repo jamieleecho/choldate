@@ -1,5 +1,5 @@
 [project]
-name = "choldate"
+name = "jlc-choldate"
 version = "0.1.0"
 description = "Somewhat fast updating and downdating of Cholesky factors in Python"
 readme = "README.md"
@@ -8,6 +8,10 @@ dependencies = [
   "Cython>=0.29.14",
   "numpy",
 ]
+
+[project.urls]
+Repository = "https://github.com/jamieleecho/choldate"
+Issues = "https://github.com/jamieleecho/choldate/issues"
 
 [dependency-groups]
 dev = [
