@@ -30,3 +30,4 @@ requires = [
   "numpy",
   "setuptools",
 ]
+build-backend = "setuptools.build_meta"
