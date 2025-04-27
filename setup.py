@@ -1,8 +1,8 @@
-from Cython.Build import cythonize
 from distutils.extension import Extension
-from setuptools import setup
 
 import numpy
+from Cython.Build import cythonize
+from setuptools import setup
 
 setup(
     ext_modules=cythonize(

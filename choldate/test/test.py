@@ -1,8 +1,10 @@
 __author__ = "jasonrudy"
 
 import unittest
+
 import numpy
-from choldate import cholupdate, choldowndate
+
+from choldate import choldowndate, cholupdate
 
 
 class TestCholdate(unittest.TestCase):
