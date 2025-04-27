@@ -4,8 +4,9 @@ Created on Feb 15, 2013
 @author: jasonrudy
 """
 
-from choldate import cholupdate, choldowndate
 import numpy
+
+from choldate import choldowndate, cholupdate
 
 # Create a random positive definite matrix, V
 numpy.random.seed(1)
